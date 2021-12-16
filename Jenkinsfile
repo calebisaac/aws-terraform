@@ -34,10 +34,11 @@ pipeline {
         }
     stage('Create nginx deployment on k8s cluster') {
       steps {
+          withAWS(credentials: 'AWS_CREDENTIALS', region: 'eu-west-2') {
         sh 'kubectl apply -f nginx.yaml'
             }
         }
-
+      }
     }
     
 }
