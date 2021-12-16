@@ -11,7 +11,7 @@ pipeline {
 
         stage('Terraform  plan') {
       steps {
-          withAWS(credentials: 'AWS_CREDENTIALS', region: 'us-west-2') {
+          withAWS(credentials: 'AWS_CREDENTIALS', region: 'eu-west-2') {
         sh 'terraform plan'
          }
       }
@@ -20,14 +20,14 @@ pipeline {
     stage('Terraform apply') {
       steps {
           
-          withAWS(credentials: 'AWS_CREDENTIALS', region: 'us-west-2') {
+          withAWS(credentials: 'AWS_CREDENTIALS', region: 'eu-west-2') {
         sh 'Terraform apply --auto-approve'
             }
         }
     }
         stage('Connect to eks cluster') {
       steps {
-          withAWS(credentials: 'AWS_CREDENTIALS', region: 'us-west-2') {
+          withAWS(credentials: 'AWS_CREDENTIALS', region: 'eu-west-2') {
         sh 'aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-2'
              }
            }
