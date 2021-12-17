@@ -1,10 +1,11 @@
-# aws-terraform
+# Pipeline Deployment of EKS Cluster in AWS
 
 
 
 
 **Initialize terraform backend providers**
-
+The terraform init command is used to initialize a working directory containing Terraform configuration files.
+This downloads all the poviders in the configuration used in talking to the AWS API.
 ~~~
 terraform init
 ~~~
@@ -18,7 +19,13 @@ terraform plan
 **Apply configuration**
 
 ~~~
-terraform apply -var-file terraform-dev.tfvars
+terraform apply --auto-approve
+~~~
+
+**Connecting to the eks-cluter**
+ This is done by importing the ```.kube/config``` 
+~~~
+aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-2
 ~~~
 
 
