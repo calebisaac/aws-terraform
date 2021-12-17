@@ -5,7 +5,8 @@
 
 **Initialize terraform backend providers**
 
-~~~terraform init
+~~~
+terraform init
 ~~~
 
 **Preview terraform actions**
