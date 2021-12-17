@@ -1,7 +1,21 @@
 # Simple Nginx Pipeline Deployment in an EKS Cluster in AWS
 
+**Platform**
+
+- AWS
+
+**Tools:**
+
+- terraform
+
+-awscli
+
+**Build/Automation Server**
+
+- Jenkins
 
 
+# Commands
 
 **Initialize terraform backend providers**
 
