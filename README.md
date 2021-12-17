@@ -20,14 +20,24 @@ terraform plan
 
 **Apply configuration**
 
+Terraform will propose the plan to you and prompt you to approve it before taking actions, we can waive that prompt by using the ```--auto-approve``` flag.
+
 ~~~
 terraform apply --auto-approve
 ~~~
 
 **Connecting to the eks-cluter**
+
  This is done by importing the ```.kube/config``` 
+ 
 ~~~
 aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-2
+~~~
+
+**Create nginx deployment on k8s cluster**
+
+~~~
+kubectl apply -f nginx.yaml
 ~~~
 
 
