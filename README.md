@@ -1,15 +1,18 @@
 # aws-terraform
 
 
-**initialize terraform backend providers**
 
-```terraform init```
 
-#Preview terraform actions
+**Initialize terraform backend providers**
+
+~~~terraform init
+~~~
+
+**Preview terraform actions**
 
 ```terraform plan```
 
-Apply configuration
+**Apply configuration**
 
 ```terraform apply -var-file terraform-dev.tfvars```
 
