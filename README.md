@@ -1,4 +1,4 @@
-# Pipeline Deployment of EKS Cluster in AWS
+# Simple Nginx Pipeline Deployment in an EKS Cluster in AWS
 
 
 
@@ -28,20 +28,26 @@ terraform apply --auto-approve
 
 **Connecting to the eks-cluter**
 
- This is done by importing the ```.kube/config``` 
+ This is done by importing the ```.kube/config``` using the ```awscli``` tool.
  
 ~~~
 aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-2
 ~~~
 
-**Create nginx deployment on k8s cluster**
+**Creating an nginx deployment on the eks cluster**
 
 ~~~
 kubectl apply -f nginx.yaml
 ~~~
 
+The nginx deployment is exposed using the service type ```loadBalancer```
 
 
+nginx deployment loadBalancer url: http://a32d9b5503b964249a336a3ff66592e0-793688625.eu-west-2.elb.amazonaws.com/
+
+
+
+-
 **Other manual command..**
 
 **set aws configuration through env variables**
