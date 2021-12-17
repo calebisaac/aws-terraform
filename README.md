@@ -8,7 +8,7 @@
 
 - terraform
 
--awscli
+- awscli
 
 **Build/Automation Server**
 
@@ -19,12 +19,14 @@
 
 **Initialize terraform backend providers**
 
-The terraform init command is used to initialize a working directory containing Terraform configuration files.
-This downloads all the poviders in the configuration used in talking to the AWS API.
-
 ~~~
 terraform init
 ~~~
+
+The terraform init command is used to initialize a working directory containing Terraform configuration files.
+This downloads all the poviders in the configuration used in talking to the AWS API.
+
+
 
 **Preview terraform actions**
 
@@ -34,19 +36,22 @@ terraform plan
 
 **Apply configuration**
 
-Terraform will propose the plan to you and prompt you to approve it before taking actions, we can waive that prompt by using the ```--auto-approve``` flag.
-
 ~~~
 terraform apply --auto-approve
 ~~~
 
+Terraform will propose the plan to you and prompt you to approve it before taking actions, we can waive that prompt by using the ```--auto-approve``` flag.
+
+
+
 **Connecting to the eks-cluter**
 
- This is done by importing the ```.kube/config``` using the ```awscli``` tool.
  
 ~~~
 aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-2
 ~~~
+
+importing the ```.kube/config``` using the ```awscli``` tool to connect to the created k8s cluster.
 
 **Creating an nginx deployment on the eks cluster**
 
@@ -57,7 +62,7 @@ kubectl apply -f nginx.yaml
 The nginx deployment is exposed using the service type ```loadBalancer```
 
 
-nginx deployment loadBalancer url: http://a32d9b5503b964249a336a3ff66592e0-793688625.eu-west-2.elb.amazonaws.com/
+**nginx deployment loadBalancer url:**  http://a32d9b5503b964249a336a3ff66592e0-793688625.eu-west-2.elb.amazonaws.com/
 
 
 
