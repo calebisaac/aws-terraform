@@ -44,7 +44,7 @@ Terraform will propose the plan to you and prompt you to approve it before takin
 
 
 
-**Connecting to the eks-cluter**
+**Connecting to the eks-cluster**
 
  
 ~~~
