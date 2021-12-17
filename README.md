@@ -5,11 +5,11 @@
 
 ```terraform init```
 
-**Preview terraform actions**
+#Preview terraform actions
 
 ```terraform plan```
 
-**Apply configuration**
+Apply configuration
 
 ```terraform apply -var-file terraform-dev.tfvars```
 
