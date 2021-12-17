@@ -4,8 +4,10 @@
 
 
 **Initialize terraform backend providers**
+
 The terraform init command is used to initialize a working directory containing Terraform configuration files.
 This downloads all the poviders in the configuration used in talking to the AWS API.
+
 ~~~
 terraform init
 ~~~
